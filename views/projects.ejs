@@ -1,272 +1,486 @@
-<section class="py-5 mt-5">
+<!-- Hero Section -->
+<section class="py-5 mt-5 bg-gradient-to-br from-primary-50 to-blue-50">
   <div class="container">
     <div class="text-center mb-5">
-      <h1 class="display-4 fw-bold">My Projects</h1>
-      <p class="lead text-muted">A collection of my work</p>
+      <span
+        class="badge bg-primary text-white px-4 py-2 rounded-pill mb-3 fs-6"
+      >
+        <i class="fas fa-rocket me-2"></i>Portfolio Showcase
+      </span>
+      <h1 class="display-4 fw-bold text-gradient mb-4">My Projects</h1>
+      <p class="lead text-muted col-lg-8 mx-auto">
+        A curated collection of my work showcasing expertise in modern web
+        technologies, creative problem-solving, and innovative solutions.
+      </p>
     </div>
 
+    <!-- Stats Row -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-3 col-sm-6">
+        <div class="card border-0 shadow-sm text-center h-100">
+          <div class="card-body p-4">
+            <div
+              class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              style="width: 60px; height: 60px"
+            >
+              <i class="fas fa-code text-primary fs-4"></i>
+            </div>
+            <h4 class="fw-bold text-primary mb-1">3</h4>
+            <p class="text-muted mb-0 small">Featured Projects</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card border-0 shadow-sm text-center h-100">
+          <div class="card-body p-4">
+            <div
+              class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              style="width: 60px; height: 60px"
+            >
+              <i class="fas fa-layer-group text-success fs-4"></i>
+            </div>
+            <h4 class="fw-bold text-success mb-1">8+</h4>
+            <p class="text-muted mb-0 small">Technologies Used</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card border-0 shadow-sm text-center h-100">
+          <div class="card-body p-4">
+            <div
+              class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              style="width: 60px; height: 60px"
+            >
+              <i class="fas fa-star text-warning fs-4"></i>
+            </div>
+            <h4 class="fw-bold text-warning mb-1">100%</h4>
+            <p class="text-muted mb-0 small">Completion Rate</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card border-0 shadow-sm text-center h-100">
+          <div class="card-body p-4">
+            <div
+              class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              style="width: 60px; height: 60px"
+            >
+              <i class="fas fa-clock text-info fs-4"></i>
+            </div>
+            <h4 class="fw-bold text-info mb-1">2024</h4>
+            <p class="text-muted mb-0 small">Latest Work</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="py-5">
+  <div class="container">
     <!-- Filter Buttons -->
     <div class="text-center mb-5">
-      <button
-        class="btn btn-outline-primary me-2 mb-2 filter-btn active"
-        data-filter="all"
+      <div
+        class="d-inline-flex flex-wrap gap-2 p-2 bg-light rounded-4 shadow-sm"
       >
-        All
-      </button>
-      <button
-        class="btn btn-outline-primary me-2 mb-2 filter-btn"
-        data-filter="web"
-      >
-        Web Apps
-      </button>
-      <button
-        class="btn btn-outline-primary me-2 mb-2 filter-btn"
-        data-filter="mobile"
-      >
-        Mobile
-      </button>
-      <button
-        class="btn btn-outline-primary me-2 mb-2 filter-btn"
-        data-filter="api"
-      >
-        APIs
-      </button>
+        <button
+          class="btn btn-primary filter-btn active shadow-sm"
+          data-filter="all"
+        >
+          <i class="fas fa-th me-2"></i>All Projects
+        </button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="web">
+          <i class="fas fa-desktop me-2"></i>Web Apps
+        </button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="api">
+          <i class="fas fa-server me-2"></i>APIs
+        </button>
+      </div>
     </div>
 
     <!-- Projects Grid -->
     <div class="row g-4" id="projectsGrid">
-      <!-- Project 1 -->
-      <div class="col-lg-4 col-md-6 project-item" data-category="web">
-        <div class="card h-100 shadow-sm project-card">
-          <div class="position-relative overflow-hidden">
+      <!-- Project 1: E-Commerce Platform -->
+      <div
+        class="col-lg-4 col-md-6 project-item fade-in-up"
+        data-category="web"
+      >
+        <div
+          class="card h-100 border-0 shadow-lg project-card rounded-4 overflow-hidden"
+        >
+          <div class="position-relative overflow-hidden" style="height: 250px">
             <img
               src="/images/project1.jpg"
-              class="card-img-top"
+              class="card-img-top h-100"
               alt="E-Commerce Platform"
-              style="height: 250px; object-fit: cover"
+              style="object-fit: cover; transition: transform 0.3s ease"
             />
-            <div class="project-overlay">
+            <div
+              class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(59, 130, 246, 0.95),
+                  rgba(6, 182, 212, 0.95)
+                );
+                opacity: 0;
+                transition: all 0.3s ease;
+              "
+            >
               <div class="text-center text-white">
-                <h5>View Project</h5>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-light btn-sm me-2">Live Demo</a>
-                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                <h5 class="fw-bold mb-3">View Project</h5>
+                <div class="d-flex gap-2 justify-content-center">
+                  <a href="#" class="btn btn-light btn-sm shadow">
+                    <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                  </a>
+                  <a href="#" class="btn btn-outline-light btn-sm">
+                    <i class="fab fa-github me-1"></i>GitHub
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">E-Commerce Platform</h5>
-            <p class="card-text">
-              A full-stack e-commerce solution with user authentication, payment
-              processing, and admin dashboard.
-            </p>
-            <div class="mb-3">
-              <span class="badge bg-primary me-1">React</span>
-              <span class="badge bg-success me-1">Node.js</span>
-              <span class="badge bg-info me-1">MongoDB</span>
-              <span class="badge bg-warning me-1">Stripe</span>
+            <div class="position-absolute top-0 end-0 m-3">
+              <span class="badge bg-success shadow-sm">
+                <i class="fas fa-check me-1"></i>Completed
+              </span>
             </div>
           </div>
-          <div class="card-footer bg-transparent">
-            <small class="text-muted">Completed: March 2024</small>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h5 class="card-title fw-bold mb-0">E-Commerce Platform</h5>
+              <div class="dropdown">
+                <button
+                  class="btn btn-sm btn-outline-secondary border-0"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-eye me-2"></i>View Details</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-code me-2"></i>Source Code</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p class="card-text text-muted mb-4">
+              A comprehensive e-commerce solution featuring user authentication,
+              secure payment processing, real-time inventory management, and an
+              intuitive admin dashboard.
+            </p>
+            <div class="mb-4">
+              <div class="d-flex flex-wrap gap-2">
+                <span
+                  class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25"
+                  >React</span
+                >
+                <span
+                  class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25"
+                  >Node.js</span
+                >
+                <span
+                  class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25"
+                  >MongoDB</span
+                >
+                <span
+                  class="badge bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25"
+                  >Stripe</span
+                >
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <small class="text-muted">
+                <i class="fas fa-calendar me-1"></i>March 2024
+              </small>
+              <div class="d-flex gap-1">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="col-lg-4 col-md-6 project-item" data-category="web">
-        <div class="card h-100 shadow-sm project-card">
-          <div class="position-relative overflow-hidden">
+      <!-- Project 2: Task Management App -->
+      <div
+        class="col-lg-4 col-md-6 project-item fade-in-up"
+        data-category="web"
+        style="animation-delay: 0.1s"
+      >
+        <div
+          class="card h-100 border-0 shadow-lg project-card rounded-4 overflow-hidden"
+        >
+          <div class="position-relative overflow-hidden" style="height: 250px">
             <img
               src="/images/project2.jpg"
-              class="card-img-top"
+              class="card-img-top h-100"
               alt="Task Management App"
-              style="height: 250px; object-fit: cover"
+              style="object-fit: cover; transition: transform 0.3s ease"
             />
-            <div class="project-overlay">
+            <div
+              class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(59, 130, 246, 0.95),
+                  rgba(6, 182, 212, 0.95)
+                );
+                opacity: 0;
+                transition: all 0.3s ease;
+              "
+            >
               <div class="text-center text-white">
-                <h5>View Project</h5>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-light btn-sm me-2">Live Demo</a>
-                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                <h5 class="fw-bold mb-3">View Project</h5>
+                <div class="d-flex gap-2 justify-content-center">
+                  <a href="#" class="btn btn-light btn-sm shadow">
+                    <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                  </a>
+                  <a href="#" class="btn btn-outline-light btn-sm">
+                    <i class="fab fa-github me-1"></i>GitHub
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Task Management App</h5>
-            <p class="card-text">
-              Collaborative task management with real-time updates, team
-              collaboration, and progress tracking.
-            </p>
-            <div class="mb-3">
-              <span class="badge bg-primary me-1">Vue.js</span>
-              <span class="badge bg-success me-1">Express</span>
-              <span class="badge bg-warning me-1">Socket.io</span>
-              <span class="badge bg-info me-1">PostgreSQL</span>
+            <div class="position-absolute top-0 end-0 m-3">
+              <span class="badge bg-primary shadow-sm">
+                <i class="fas fa-star me-1"></i>Featured
+              </span>
             </div>
           </div>
-          <div class="card-footer bg-transparent">
-            <small class="text-muted">Completed: February 2024</small>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h5 class="card-title fw-bold mb-0">Task Management App</h5>
+              <div class="dropdown">
+                <button
+                  class="btn btn-sm btn-outline-secondary border-0"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-eye me-2"></i>View Details</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-code me-2"></i>Source Code</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-external-link-alt me-2"></i>Live Demo</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p class="card-text text-muted mb-4">
+              Collaborative task management platform with real-time updates,
+              Kanban boards, team collaboration features, and comprehensive
+              progress tracking.
+            </p>
+            <div class="mb-4">
+              <div class="d-flex flex-wrap gap-2">
+                <span
+                  class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25"
+                  >Vue.js</span
+                >
+                <span
+                  class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25"
+                  >Express</span
+                >
+                <span
+                  class="badge bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25"
+                  >Socket.io</span
+                >
+                <span
+                  class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25"
+                  >PostgreSQL</span
+                >
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <small class="text-muted">
+                <i class="fas fa-calendar me-1"></i>February 2024
+              </small>
+              <div class="d-flex gap-1">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-muted"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="col-lg-4 col-md-6 project-item" data-category="api">
-        <div class="card h-100 shadow-sm project-card">
-          <div class="position-relative overflow-hidden">
+      <!-- Project 3: RESTful API Service -->
+      <div
+        class="col-lg-4 col-md-6 project-item fade-in-up"
+        data-category="api"
+        style="animation-delay: 0.2s"
+      >
+        <div
+          class="card h-100 border-0 shadow-lg project-card rounded-4 overflow-hidden"
+        >
+          <div class="position-relative overflow-hidden" style="height: 250px">
             <img
               src="/images/project3.jpg"
-              class="card-img-top"
+              class="card-img-top h-100"
               alt="REST API"
-              style="height: 250px; object-fit: cover"
+              style="object-fit: cover; transition: transform 0.3s ease"
             />
-            <div class="project-overlay">
+            <div
+              class="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(59, 130, 246, 0.95),
+                  rgba(6, 182, 212, 0.95)
+                );
+                opacity: 0;
+                transition: all 0.3s ease;
+              "
+            >
               <div class="text-center text-white">
-                <h5>View Project</h5>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-light btn-sm me-2"
-                    >Documentation</a
-                  >
-                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                <h5 class="fw-bold mb-3">View Project</h5>
+                <div class="d-flex gap-2 justify-content-center">
+                  <a href="#" class="btn btn-light btn-sm shadow">
+                    <i class="fas fa-book me-1"></i>Documentation
+                  </a>
+                  <a href="#" class="btn btn-outline-light btn-sm">
+                    <i class="fab fa-github me-1"></i>GitHub
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">RESTful API Service</h5>
-            <p class="card-text">
-              Scalable API service with authentication, rate limiting, and
-              comprehensive documentation.
-            </p>
-            <div class="mb-3">
-              <span class="badge bg-success me-1">Node.js</span>
-              <span class="badge bg-primary me-1">Express</span>
-              <span class="badge bg-info me-1">JWT</span>
-              <span class="badge bg-secondary me-1">Swagger</span>
+            <div class="position-absolute top-0 end-0 m-3">
+              <span class="badge bg-info shadow-sm">
+                <i class="fas fa-server me-1"></i>API
+              </span>
             </div>
           </div>
-          <div class="card-footer bg-transparent">
-            <small class="text-muted">Completed: January 2024</small>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h5 class="card-title fw-bold mb-0">RESTful API Service</h5>
+              <div class="dropdown">
+                <button
+                  class="btn btn-sm btn-outline-secondary border-0"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-eye me-2"></i>View Details</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-code me-2"></i>Source Code</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fas fa-book me-2"></i>Documentation</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p class="card-text text-muted mb-4">
+              Scalable REST API service with JWT authentication, advanced rate
+              limiting, comprehensive documentation, and robust error handling.
+            </p>
+            <div class="mb-4">
+              <div class="d-flex flex-wrap gap-2">
+                <span
+                  class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25"
+                  >Node.js</span
+                >
+                <span
+                  class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25"
+                  >Express</span
+                >
+                <span
+                  class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25"
+                  >JWT</span
+                >
+                <span
+                  class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-25"
+                  >Swagger</span
+                >
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <small class="text-muted">
+                <i class="fas fa-calendar me-1"></i>January 2024
+              </small>
+              <div class="d-flex gap-1">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Project 4 -->
-      <div class="col-lg-4 col-md-6 project-item" data-category="mobile">
-        <div class="card h-100 shadow-sm project-card">
-          <div class="position-relative overflow-hidden">
-            <img
-              src="/images/project4.jpg"
-              class="card-img-top"
-              alt="Mobile App"
-              style="height: 250px; object-fit: cover"
-            />
-            <div class="project-overlay">
-              <div class="text-center text-white">
-                <h5>View Project</h5>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-light btn-sm me-2">App Store</a>
-                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">React Native App</h5>
-            <p class="card-text">
-              Cross-platform mobile application with offline capabilities and
-              push notifications.
-            </p>
-            <div class="mb-3">
-              <span class="badge bg-primary me-1">React Native</span>
-              <span class="badge bg-info me-1">Redux</span>
-              <span class="badge bg-warning me-1">Firebase</span>
-            </div>
-          </div>
-          <div class="card-footer bg-transparent">
-            <small class="text-muted">Completed: December 2023</small>
-          </div>
-        </div>
+<!-- Call to Action Section -->
+<section class="py-5 bg-primary text-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h3 class="fw-bold mb-3">Interested in My Work?</h3>
+        <p class="mb-lg-0 opacity-90 lead">
+          These projects represent just a glimpse of what I can create. Let's
+          discuss how I can bring value to your next project with my technical
+          skills and creative problem-solving approach.
+        </p>
       </div>
-
-      <!-- Project 5 -->
-      <div class="col-lg-4 col-md-6 project-item" data-category="web">
-        <div class="card h-100 shadow-sm project-card">
-          <div class="position-relative overflow-hidden">
-            <img
-              src="/images/project5.jpg"
-              class="card-img-top"
-              alt="Data Visualization"
-              style="height: 250px; object-fit: cover"
-            />
-            <div class="project-overlay">
-              <div class="text-center text-white">
-                <h5>View Project</h5>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-light btn-sm me-2">Live Demo</a>
-                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Data Visualization Dashboard</h5>
-            <p class="card-text">
-              Interactive dashboard for data analysis with real-time charts and
-              filtering capabilities.
-            </p>
-            <div class="mb-3">
-              <span class="badge bg-primary me-1">React</span>
-              <span class="badge bg-info me-1">D3.js</span>
-              <span class="badge bg-secondary me-1">Python</span>
-              <span class="badge bg-success me-1">Flask</span>
-            </div>
-          </div>
-          <div class="card-footer bg-transparent">
-            <small class="text-muted">Completed: November 2023</small>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="col-lg-4 col-md-6 project-item" data-category="web">
-        <div class="card h-100 shadow-sm project-card">
-          <div class="position-relative overflow-hidden">
-            <img
-              src="/images/project6.jpg"
-              class="card-img-top"
-              alt="CMS System"
-              style="height: 250px; object-fit: cover"
-            />
-            <div class="project-overlay">
-              <div class="text-center text-white">
-                <h5>View Project</h5>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-light btn-sm me-2">Live Demo</a>
-                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Content Management System</h5>
-            <p class="card-text">
-              Custom CMS with drag-and-drop page builder, user management, and
-              SEO optimization.
-            </p>
-            <div class="mb-3">
-              <span class="badge bg-primary me-1">Next.js</span>
-              <span class="badge bg-success me-1">Node.js</span>
-              <span class="badge bg-info me-1">MySQL</span>
-              <span class="badge bg-warning me-1">AWS</span>
-            </div>
-          </div>
-          <div class="card-footer bg-transparent">
-            <small class="text-muted">Completed: October 2023</small>
-          </div>
+      <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+        <div
+          class="d-flex gap-3 justify-content-lg-end justify-content-center flex-wrap"
+        >
+          <a href="/contact" class="btn btn-light btn-lg shadow-sm">
+            <i class="fas fa-envelope me-2"></i>Contact Me
+          </a>
+          <a href="/resume" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-file-alt me-2"></i>View Resume
+          </a>
         </div>
       </div>
     </div>
@@ -284,16 +498,22 @@
         const filter = this.getAttribute("data-filter");
 
         // Update active button
-        filterButtons.forEach((btn) => btn.classList.remove("active"));
-        this.classList.add("active");
+        filterButtons.forEach((btn) => {
+          btn.classList.remove("active", "btn-primary");
+          btn.classList.add("btn-outline-primary");
+        });
+        this.classList.remove("btn-outline-primary");
+        this.classList.add("active", "btn-primary");
 
-        // Filter projects
-        projectItems.forEach((item) => {
+        // Filter projects with staggered animation
+        projectItems.forEach((item, index) => {
           const category = item.getAttribute("data-category");
 
           if (filter === "all" || category === filter) {
             item.style.display = "block";
-            item.classList.add("fade-in-up");
+            setTimeout(() => {
+              item.classList.add("fade-in-up");
+            }, index * 100);
           } else {
             item.style.display = "none";
             item.classList.remove("fade-in-up");
@@ -301,5 +521,81 @@
         });
       });
     });
+
+    // Project card hover effects
+    const projectCards = document.querySelectorAll(".project-card");
+
+    projectCards.forEach((card) => {
+      const overlay = card.querySelector(".project-overlay");
+      const image = card.querySelector(".card-img-top");
+
+      card.addEventListener("mouseenter", function () {
+        overlay.style.opacity = "1";
+        image.style.transform = "scale(1.05)";
+      });
+
+      card.addEventListener("mouseleave", function () {
+        overlay.style.opacity = "0";
+        image.style.transform = "scale(1)";
+      });
+    });
   });
 </script>
+
+<style>
+  /* Enhanced project card styles */
+  .project-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Filter button animations */
+  .filter-btn {
+    transition: all 0.2s ease;
+    font-weight: 600;
+  }
+
+  .filter-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Card animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .filter-btn {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>

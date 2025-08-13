@@ -3,15 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
+    <title>
+      <%= typeof title !== 'undefined' ? title : 'William Ma - Portfolio' %>
+    </title>
     <meta
       name="description"
-      content="Professional portfolio showcasing web development projects and skills"
+      content="<%= typeof description !== 'undefined' ? description : 'William Ma - Intern Software Engineer crafting modern web experiences with cutting-edge technologies' %>"
     />
     <meta
       name="keywords"
-      content="web developer, portfolio, projects, skills"
+      content="<%= typeof keywords !== 'undefined' ? keywords : 'William Ma, software engineer, web developer, portfolio, Ho Chi Minh City, Vietnam' %>"
     />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="<%= typeof title !== 'undefined' ? title : 'William Ma - Portfolio' %>"
+    />
+    <meta
+      property="og:description"
+      content="<%= typeof description !== 'undefined' ? description : 'Intern Software Engineer passionate about creating elegant solutions' %>"
+    />
+    <meta property="og:image" content="/images/og-image.jpg" />
+    <meta
+      property="og:url"
+      content="<%= process.env.SITE_URL || 'http://localhost:3000' %>"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="<%= typeof title !== 'undefined' ? title : 'William Ma - Portfolio' %>"
+    />
+    <meta
+      name="twitter:description"
+      content="<%= typeof description !== 'undefined' ? description : 'Intern Software Engineer passionate about creating elegant solutions' %>"
+    />
+    <meta name="twitter:image" content="/images/twitter-card.jpg" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -23,24 +53,64 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS Animation Library -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css" />
 
+    <!-- Additional Page Specific CSS -->
+    <%- typeof customCSS !== 'undefined' ? customCSS : '' %>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#3b82f6" />
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      id="mainNav"
+    >
       <div class="container">
-        <a class="navbar-brand" href="/"
-          ><%= process.env.SITE_NAME || 'Portfolio' %></a
-        >
+        <a class="navbar-brand" href="/">
+          <span class="fw-bold">William</span
+          ><span class="text-primary">.</span>
+        </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,77 +118,277 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a
-                class="nav-link <%= page === 'home' ? 'active' : '' %>"
+                class="nav-link <%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %>"
                 href="/"
-                >Home</a
               >
+                <i class="fas fa-home me-1 d-lg-none"></i>Home
+              </a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link <%= page === 'about' ? 'active' : '' %>"
+                class="nav-link <%= typeof page !== 'undefined' && page === 'about' ? 'active' : '' %>"
                 href="/about"
-                >About</a
               >
+                <i class="fas fa-user me-1 d-lg-none"></i>About
+              </a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link <%= page === 'projects' ? 'active' : '' %>"
+                class="nav-link <%= typeof page !== 'undefined' && page === 'projects' ? 'active' : '' %>"
                 href="/projects"
-                >Projects</a
               >
+                <i class="fas fa-folder-open me-1 d-lg-none"></i>Projects
+              </a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link <%= page === 'resume' ? 'active' : '' %>"
+                class="nav-link <%= typeof page !== 'undefined' && page === 'resume' ? 'active' : '' %>"
                 href="/resume"
-                >Resume</a
               >
+                <i class="fas fa-file-alt me-1 d-lg-none"></i>Resume
+              </a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link <%= page === 'contact' ? 'active' : '' %>"
+                class="nav-link <%= typeof page !== 'undefined' && page === 'contact' ? 'active' : '' %>"
                 href="/contact"
-                >Contact</a
               >
+                <i class="fas fa-envelope me-1 d-lg-none"></i>Contact
+              </a>
             </li>
           </ul>
+          <!-- Dark Mode Toggle (Optional) -->
+          <button
+            class="btn btn-sm btn-outline-primary ms-3 d-none"
+            id="darkModeToggle"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
         </div>
       </div>
     </nav>
 
+    <!-- Progress Bar -->
+    <div
+      class="progress position-fixed top-0 start-0 w-100"
+      style="height: 3px; z-index: 1050"
+    >
+      <div
+        class="progress-bar bg-primary"
+        id="scrollProgress"
+        role="progressbar"
+        style="width: 0%"
+      ></div>
+    </div>
+
     <!-- Main Content -->
-    <main><%- body %></main>
+    <main id="mainContent"><%- body %></main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-4 mt-5">
+    <footer class="bg-dark text-light py-5 mt-auto">
       <div class="container">
         <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-3">William Ma</h5>
+            <p class="text-muted mb-3">
+              Intern Software Engineer passionate about creating elegant
+              solutions to complex problems through clean code and innovative
+              thinking.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://github.com/williamm"
+                class="text-light me-3 fs-5"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/williamm"
+                class="text-light me-3 fs-5"
+                title="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://twitter.com/williamm"
+                class="text-light me-3 fs-5"
+                title="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="mailto:mqcuong1603@gmail.com"
+                class="text-light fs-5"
+                title="Email"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="/" class="text-muted text-decoration-none footer-link">
+                  <i class="fas fa-angle-right me-1"></i>Home
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="/about"
+                  class="text-muted text-decoration-none footer-link"
+                >
+                  <i class="fas fa-angle-right me-1"></i>About Me
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="/projects"
+                  class="text-muted text-decoration-none footer-link"
+                >
+                  <i class="fas fa-angle-right me-1"></i>Projects
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="/resume"
+                  class="text-muted text-decoration-none footer-link"
+                >
+                  <i class="fas fa-angle-right me-1"></i>Resume
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  class="text-muted text-decoration-none footer-link"
+                >
+                  <i class="fas fa-angle-right me-1"></i>Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h6 class="fw-bold mb-3">Technologies</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary">JavaScript</span>
+              <span class="badge bg-secondary">React</span>
+              <span class="badge bg-secondary">Node.js</span>
+              <span class="badge bg-secondary">Express</span>
+              <span class="badge bg-secondary">MongoDB</span>
+              <span class="badge bg-secondary">AWS</span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <h6 class="fw-bold mb-3">Get In Touch</h6>
+            <p class="text-muted mb-2">
+              <i class="fas fa-envelope me-2"></i>mqcuong1603@gmail.com
+            </p>
+            <p class="text-muted mb-2">
+              <i class="fas fa-phone me-2"></i>(+84) 868959212
+            </p>
+            <p class="text-muted mb-3">
+              <i class="fas fa-map-marker-alt me-2"></i>Ho Chi Minh City,
+              Vietnam
+            </p>
+            <a href="/contact" class="btn btn-outline-primary btn-sm">
+              <i class="fas fa-paper-plane me-1"></i>Send Message
+            </a>
+          </div>
+        </div>
+        <hr class="my-4 border-secondary" />
+        <div class="row align-items-center">
           <div class="col-md-6">
-            <p>
-              &copy; <%= new Date().getFullYear() %> <%= process.env.SITE_NAME
-              || 'Portfolio' %>. All rights reserved.
+            <p class="mb-0 text-muted small">
+              &copy; <%= new Date().getFullYear() %> William Ma. All rights
+              reserved.
             </p>
           </div>
           <div class="col-md-6 text-md-end">
-            <div class="social-links">
-              <a href="#" class="text-light me-3"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a href="#" class="text-light me-3"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a href="#" class="text-light me-3"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </div>
+            <p class="mb-0 text-muted small">
+              Built with <i class="fas fa-heart text-danger mx-1"></i> using
+              Node.js & AWS
+            </p>
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 shadow-lg"
+      style="width: 50px; height: 50px; display: none; z-index: 1000"
+      aria-label="Back to top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Custom JS -->
     <script src="/js/main.js"></script>
+
+    <!-- Additional Page Specific JS -->
+    <%- typeof customJS !== 'undefined' ? customJS : '' %>
+
+    <!-- Initialize AOS -->
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+
+      // Scroll Progress Bar
+      window.addEventListener("scroll", function () {
+        const winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        const height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        const progressBar = document.getElementById("scrollProgress");
+        if (progressBar) {
+          progressBar.style.width = scrolled + "%";
+        }
+      });
+
+      // Back to Top Button
+      const backToTopButton = document.getElementById("backToTop");
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
+
+      backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Footer Link Hover Effect
+      document.querySelectorAll(".footer-link").forEach((link) => {
+        link.addEventListener("mouseenter", function () {
+          this.style.paddingLeft = "5px";
+          this.style.transition = "padding-left 0.3s ease";
+        });
+        link.addEventListener("mouseleave", function () {
+          this.style.paddingLeft = "0";
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,168 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found | William Ma</title>
-    <meta
-      name="description"
-      content="The page you're looking for doesn't exist"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <span class="fw-bold">William</span
-          ><span class="text-primary">.</span>
-        </a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/resume">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
-            </li>
-          </ul>
+<section class="py-5 mt-5 min-vh-100 d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <!-- Animated 404 -->
+        <div class="mb-5 position-relative">
+          <h1
+            class="display-1 fw-bold mb-0"
+            style="font-size: 10rem; line-height: 1"
+          >
+            <span class="text-primary">4</span>
+            <span class="text-muted position-relative">
+              <i
+                class="fas fa-cog fa-spin position-absolute"
+                style="
+                  font-size: 5rem;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  opacity: 0.1;
+                "
+              ></i>
+              0
+            </span>
+            <span class="text-primary">4</span>
+          </h1>
         </div>
-      </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main>
-      <section class="py-5 mt-5 min-vh-100 d-flex align-items-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-              <!-- Animated 404 -->
-              <div class="mb-5 position-relative">
-                <h1
-                  class="display-1 fw-bold mb-0"
-                  style="font-size: 10rem; line-height: 1"
-                >
-                  <span class="text-primary">4</span>
-                  <span class="text-muted position-relative">
-                    <i
-                      class="fas fa-cog fa-spin position-absolute"
-                      style="
-                        font-size: 5rem;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        opacity: 0.1;
-                      "
-                    ></i>
-                    0
-                  </span>
-                  <span class="text-primary">4</span>
-                </h1>
-              </div>
+        <!-- Error Message -->
+        <div class="mb-5">
+          <span
+            class="badge bg-danger text-white px-3 py-2 rounded-pill mb-4 fs-6"
+          >
+            <i class="fas fa-exclamation-triangle me-2"></i>Page Not Found
+          </span>
+          <h2 class="h1 fw-bold mb-4">Oops! Lost in Space</h2>
+          <p class="lead text-muted mb-4">
+            The page you're looking for seems to have vanished into the digital
+            void. It might have been moved, deleted, or perhaps it never
+            existed.
+          </p>
+        </div>
 
-              <!-- Error Message -->
-              <div class="mb-5">
-                <span
-                  class="badge bg-danger bg-opacity-10 text-danger px-3 py-2 rounded-pill mb-4"
-                >
-                  <i class="fas fa-exclamation-triangle me-2"></i>Page Not Found
-                </span>
-                <h2 class="h1 fw-bold mb-4">Oops! Lost in Space</h2>
-                <p class="lead text-muted mb-4">
-                  The page you're looking for seems to have vanished into the
-                  digital void. It might have been moved, deleted, or perhaps it
-                  never existed.
-                </p>
-              </div>
+        <!-- Suggestions -->
+        <div class="card border-0 shadow-sm rounded-4 mb-5">
+          <div class="card-body p-4">
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-lightbulb text-warning me-2"></i>
+              Here's what you can try:
+            </h5>
+            <ul class="list-unstyled text-start">
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Check if the URL is typed correctly
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Go back to the homepage and navigate from there
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Use the navigation menu to find what you need
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Contact me if you believe this is an error
+              </li>
+            </ul>
+          </div>
+        </div>
 
-              <!-- Suggestions -->
-              <div class="card border-0 shadow-sm rounded-4 mb-5">
-                <div class="card-body p-4">
-                  <h5 class="fw-bold mb-3">
-                    <i class="fas fa-lightbulb text-warning me-2"></i>
-                    Here's what you can try:
-                  </h5>
-                  <ul class="list-unstyled text-start">
-                    <li class="mb-2">
-                      <i class="fas fa-check-circle text-success me-2"></i>
-                      Check if the URL is typed correctly
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check-circle text-success me-2"></i>
-                      Go back to the homepage and navigate from there
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check-circle text-success me-2"></i>
-                      Use the navigation menu to find what you need
-                    </li>
-                    <li>
-                      <i class="fas fa-check-circle text-success me-2"></i>
-                      Contact me if you believe this is an error
-                    </li>
-                  </ul>
-                </div>
-              </div>
+        <!-- Action Buttons -->
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="/" class="btn btn-primary btn-lg shadow-sm">
+            <i class="fas fa-home me-2"></i>Back to Home
+          </a>
+          <a href="/projects" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-folder-open me-2"></i>View Projects
+          </a>
+          <a href="/contact" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-envelope me-2"></i>Contact Me
+          </a>
+        </div>
 
-              <!-- Action Buttons -->
-              <div class="d-flex gap-3 justify-content-center flex-wrap">
-                <a href="/" class="btn btn-primary btn-lg shadow-sm">
-                  <i class="fas fa-home me-2"></i>Back to Home
-                </a>
-                <a href="/projects" class="btn btn-outline-primary btn-lg">
-                  <i class="fas fa-folder-open me-2"></i>View Projects
-                </a>
-                <a href="/contact" class="btn btn-outline-primary btn-lg">
-                  <i class="fas fa-envelope me-2"></i>Contact Me
-                </a>
-              </div>
-
-              <!-- Fun ASCII Art (optional) -->
-              <div class="mt-5 pt-5">
-                <pre
-                  class="text-muted small d-none d-md-block"
-                  style="font-family: monospace; line-height: 1.2"
-                >
+        <!-- Fun ASCII Art (optional) -->
+        <div class="mt-5 pt-5">
+          <pre
+            class="text-muted small d-none d-md-block"
+            style="font-family: monospace; line-height: 1.2"
+          >
     ___________________________
    |  _____________________  |
    | |                     | |
@@ -171,137 +96,28 @@
    | |   ¯\_(ツ)_/¯        | |
    | |_____________________| |
    |_________________________|
-                </pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h5 class="fw-bold mb-3">William Ma</h5>
-            <p class="text-muted mb-3">
-              Intern Software Engineer passionate about creating elegant
-              solutions to complex problems.
-            </p>
-            <div class="social-links">
-              <a
-                href="https://github.com"
-                class="text-light me-3 fs-5"
-                title="GitHub"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="https://linkedin.com"
-                class="text-light me-3 fs-5"
-                title="LinkedIn"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://twitter.com"
-                class="text-light me-3 fs-5"
-                title="Twitter"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="mailto:mqcuong1603@gmail.com"
-                class="text-light fs-5"
-                title="Email"
-              >
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h6 class="fw-bold mb-3">Quick Links</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href="/" class="text-muted text-decoration-none">Home</a>
-              </li>
-              <li class="mb-2">
-                <a href="/about" class="text-muted text-decoration-none"
-                  >About Me</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="/projects" class="text-muted text-decoration-none"
-                  >Projects</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="/resume" class="text-muted text-decoration-none"
-                  >Resume</a
-                >
-              </li>
-              <li>
-                <a href="/contact" class="text-muted text-decoration-none"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h6 class="fw-bold mb-3">Get In Touch</h6>
-            <p class="text-muted mb-2">
-              <i class="fas fa-envelope me-2"></i>mqcuong1603@gmail.com
-            </p>
-            <p class="text-muted mb-2">
-              <i class="fas fa-phone me-2"></i>(+84) 868959212
-            </p>
-            <p class="text-muted">
-              <i class="fas fa-map-marker-alt me-2"></i>Ho Chi Minh City,
-              Vietnam
-            </p>
-          </div>
-        </div>
-        <hr class="my-4 border-secondary" />
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <p class="mb-0 text-muted">
-              &copy; <%= new Date().getFullYear() %> William Ma. All rights
-              reserved.
-            </p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <p class="mb-0 text-muted">
-              Built with <i class="fas fa-heart text-danger mx-1"></i> using
-              Node.js & AWS
-            </p>
-          </div>
+          </pre>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
+</section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="/js/main.js"></script>
+<style>
+  /* Additional 404 page styles */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 
-    <style>
-      /* Additional 404 page styles */
-      @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-
-      .display-1 {
-        animation: float 3s ease-in-out infinite;
-      }
-    </style>
-  </body>
-</html>
+  .display-1 {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
