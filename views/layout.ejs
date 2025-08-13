@@ -58,16 +58,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- AOS Animation Library -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      rel="stylesheet"
-    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css" />
-
-    <!-- Additional Page Specific CSS -->
-    <%- typeof customCSS !== 'undefined' ? customCSS : '' %>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
@@ -92,19 +84,19 @@
     <!-- Theme Color for Mobile Browsers -->
     <meta name="theme-color" content="#3b82f6" />
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <!-- Navigation -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
       id="mainNav"
     >
       <div class="container">
-        <a class="navbar-brand" href="/">
-          <span class="fw-bold">William</span
+        <a class="navbar-brand fw-bold fs-4" href="/">
+          <span class="text-dark">William</span
           ><span class="text-primary">.</span>
         </a>
         <button
-          class="navbar-toggler border-0"
+          class="navbar-toggler border-0 shadow-none"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -118,57 +110,50 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a
-                class="nav-link <%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %>"
+                class="nav-link fw-medium <%= typeof page !== 'undefined' && page === 'home' ? 'active text-primary' : 'text-dark' %>"
                 href="/"
               >
-                <i class="fas fa-home me-1 d-lg-none"></i>Home
+                Home
               </a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link <%= typeof page !== 'undefined' && page === 'about' ? 'active' : '' %>"
+                class="nav-link fw-medium <%= typeof page !== 'undefined' && page === 'about' ? 'active text-primary' : 'text-dark' %>"
                 href="/about"
               >
-                <i class="fas fa-user me-1 d-lg-none"></i>About
+                About
               </a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link <%= typeof page !== 'undefined' && page === 'projects' ? 'active' : '' %>"
+                class="nav-link fw-medium <%= typeof page !== 'undefined' && page === 'projects' ? 'active text-primary' : 'text-dark' %>"
                 href="/projects"
               >
-                <i class="fas fa-folder-open me-1 d-lg-none"></i>Projects
+                Projects
               </a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link <%= typeof page !== 'undefined' && page === 'resume' ? 'active' : '' %>"
+                class="nav-link fw-medium <%= typeof page !== 'undefined' && page === 'resume' ? 'active text-primary' : 'text-dark' %>"
                 href="/resume"
               >
-                <i class="fas fa-file-alt me-1 d-lg-none"></i>Resume
+                Resume
               </a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link <%= typeof page !== 'undefined' && page === 'contact' ? 'active' : '' %>"
+                class="nav-link fw-medium <%= typeof page !== 'undefined' && page === 'contact' ? 'active text-primary' : 'text-dark' %>"
                 href="/contact"
               >
-                <i class="fas fa-envelope me-1 d-lg-none"></i>Contact
+                Contact
               </a>
             </li>
           </ul>
-          <!-- Dark Mode Toggle (Optional) -->
-          <button
-            class="btn btn-sm btn-outline-primary ms-3 d-none"
-            id="darkModeToggle"
-          >
-            <i class="fas fa-moon"></i>
-          </button>
         </div>
       </div>
     </nav>
 
-    <!-- Progress Bar -->
+    <!-- Scroll Progress Bar -->
     <div
       class="progress position-fixed top-0 start-0 w-100"
       style="height: 3px; z-index: 1050"
@@ -182,139 +167,116 @@
     </div>
 
     <!-- Main Content -->
-    <main id="mainContent"><%- body %></main>
+    <main class="flex-grow-1"><%- body %></main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-5 mt-auto">
+    <!-- Elegant Compact Footer -->
+    <footer class="elegant-footer bg-dark text-light py-4">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <h5 class="fw-bold mb-3">William Ma</h5>
-            <p class="text-muted mb-3">
-              Intern Software Engineer passionate about creating elegant
-              solutions to complex problems through clean code and innovative
-              thinking.
-            </p>
-            <div class="social-links">
-              <a
-                href="https://github.com/williamm"
-                class="text-light me-3 fs-5"
-                title="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="https://linkedin.com/in/williamm"
-                class="text-light me-3 fs-5"
-                title="LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://twitter.com/williamm"
-                class="text-light me-3 fs-5"
-                title="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="mailto:mqcuong1603@gmail.com"
-                class="text-light fs-5"
-                title="Email"
-              >
-                <i class="fas fa-envelope"></i>
-              </a>
+        <div class="row align-items-center g-3">
+          <!-- Brand & Social -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-md-start"
+            >
+              <div class="footer-brand me-4">
+                <h5 class="fw-bold mb-1 text-white">
+                  William<span class="text-primary">.</span>
+                </h5>
+                <small class="text-muted">Software Engineer</small>
+              </div>
+              <div class="social-links d-flex gap-2">
+                <a
+                  href="https://github.com/williamm"
+                  class="social-icon"
+                  title="GitHub"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/in/williamm"
+                  class="social-icon"
+                  title="LinkedIn"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://twitter.com/williamm"
+                  class="social-icon"
+                  title="Twitter"
+                  target="_blank"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="mailto:mqcuong1603@gmail.com"
+                  class="social-icon"
+                  title="Email"
+                >
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h6 class="fw-bold mb-3">Quick Links</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href="/" class="text-muted text-decoration-none footer-link">
-                  <i class="fas fa-angle-right me-1"></i>Home
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="/about"
-                  class="text-muted text-decoration-none footer-link"
-                >
-                  <i class="fas fa-angle-right me-1"></i>About Me
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="/projects"
-                  class="text-muted text-decoration-none footer-link"
-                >
-                  <i class="fas fa-angle-right me-1"></i>Projects
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="/resume"
-                  class="text-muted text-decoration-none footer-link"
-                >
-                  <i class="fas fa-angle-right me-1"></i>Resume
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact"
-                  class="text-muted text-decoration-none footer-link"
-                >
-                  <i class="fas fa-angle-right me-1"></i>Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h6 class="fw-bold mb-3">Technologies</h6>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-secondary">JavaScript</span>
-              <span class="badge bg-secondary">React</span>
-              <span class="badge bg-secondary">Node.js</span>
-              <span class="badge bg-secondary">Express</span>
-              <span class="badge bg-secondary">MongoDB</span>
-              <span class="badge bg-secondary">AWS</span>
+
+          <!-- Quick Links -->
+          <div class="col-lg-4 col-md-6">
+            <div class="quick-links d-flex justify-content-center gap-4">
+              <a href="/" class="footer-link">Home</a>
+              <a href="/about" class="footer-link">About</a>
+              <a href="/projects" class="footer-link">Projects</a>
+              <a href="/resume" class="footer-link">Resume</a>
+              <a href="/contact" class="footer-link">Contact</a>
             </div>
           </div>
-          <div class="col-lg-3 col-md-12">
-            <h6 class="fw-bold mb-3">Get In Touch</h6>
-            <p class="text-muted mb-2">
-              <i class="fas fa-envelope me-2"></i>mqcuong1603@gmail.com
-            </p>
-            <p class="text-muted mb-2">
-              <i class="fas fa-phone me-2"></i>(+84) 868959212
-            </p>
-            <p class="text-muted mb-3">
-              <i class="fas fa-map-marker-alt me-2"></i>Ho Chi Minh City,
-              Vietnam
-            </p>
-            <a href="/contact" class="btn btn-outline-primary btn-sm">
-              <i class="fas fa-paper-plane me-1"></i>Send Message
-            </a>
+
+          <!-- Contact & Tech -->
+          <div class="col-lg-4 col-12">
+            <div class="text-center text-lg-end">
+              <div class="contact-brief mb-2">
+                <span class="contact-item me-3">
+                  <i class="fas fa-envelope text-primary me-1"></i>
+                  <small>mqcuong1603@gmail.com</small>
+                </span>
+                <span class="contact-item">
+                  <i class="fas fa-map-marker-alt text-success me-1"></i>
+                  <small>Ho Chi Minh City</small>
+                </span>
+              </div>
+              <div
+                class="tech-tags d-flex justify-content-center justify-content-lg-end gap-1 flex-wrap"
+              >
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">AWS</span>
+              </div>
+            </div>
           </div>
         </div>
-        <hr class="my-4 border-secondary" />
+
+        <!-- Bottom Bar -->
+        <hr class="my-3 border-secondary opacity-25" />
         <div class="row align-items-center">
-          <div class="col-md-6">
-            <p class="mb-0 text-muted small">
-              &copy; <%= new Date().getFullYear() %> William Ma. All rights
-              reserved.
+          <div class="col-md-8">
+            <p class="mb-0 small text-light opacity-75">
+              &copy; <%= new Date().getFullYear() %> William Ma. Built with
+              <i class="fas fa-heart text-danger mx-1"></i> using Node.js & AWS
             </p>
           </div>
-          <div class="col-md-6 text-md-end">
-            <p class="mb-0 text-muted small">
-              Built with <i class="fas fa-heart text-danger mx-1"></i> using
-              Node.js & AWS
-            </p>
+          <div class="col-md-4 text-md-end mt-2 mt-md-0">
+            <div
+              class="d-flex justify-content-center justify-content-md-end gap-2"
+            >
+              <span class="status-badge">
+                <i
+                  class="fas fa-circle text-success me-1"
+                  style="font-size: 0.5rem"
+                ></i>
+                <small>Available for Work</small>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -323,8 +285,16 @@
     <!-- Back to Top Button -->
     <button
       id="backToTop"
-      class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 shadow-lg"
-      style="width: 50px; height: 50px; display: none; z-index: 1000"
+      class="btn btn-primary rounded-circle position-fixed shadow-lg"
+      style="
+        width: 50px;
+        height: 50px;
+        bottom: 30px;
+        right: 30px;
+        display: none;
+        z-index: 1000;
+        border: none;
+      "
       aria-label="Back to top"
     >
       <i class="fas fa-arrow-up"></i>
@@ -332,24 +302,13 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Custom JS -->
     <script src="/js/main.js"></script>
 
-    <!-- Additional Page Specific JS -->
-    <%- typeof customJS !== 'undefined' ? customJS : '' %>
-
-    <!-- Initialize AOS -->
+    <!-- Layout JavaScript -->
     <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100,
-      });
-
       // Scroll Progress Bar
-      window.addEventListener("scroll", function () {
+      function updateScrollProgress() {
         const winScroll =
           document.body.scrollTop || document.documentElement.scrollTop;
         const height =
@@ -360,35 +319,348 @@
         if (progressBar) {
           progressBar.style.width = scrolled + "%";
         }
-      });
+      }
 
       // Back to Top Button
-      const backToTopButton = document.getElementById("backToTop");
-      window.addEventListener("scroll", function () {
+      function handleBackToTop() {
+        const backToTopButton = document.getElementById("backToTop");
         if (window.pageYOffset > 300) {
           backToTopButton.style.display = "block";
         } else {
           backToTopButton.style.display = "none";
         }
+      }
+
+      // Navbar scroll effect
+      function handleNavbarScroll() {
+        const navbar = document.getElementById("mainNav");
+        if (window.scrollY > 50) {
+          navbar.classList.add("navbar-scrolled");
+        } else {
+          navbar.classList.remove("navbar-scrolled");
+        }
+      }
+
+      // Event Listeners
+      window.addEventListener("scroll", function () {
+        updateScrollProgress();
+        handleBackToTop();
+        handleNavbarScroll();
       });
 
-      backToTopButton.addEventListener("click", function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+      document
+        .getElementById("backToTop")
+        .addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
         });
-      });
 
-      // Footer Link Hover Effect
+      // Footer link hover effects
       document.querySelectorAll(".footer-link").forEach((link) => {
         link.addEventListener("mouseenter", function () {
-          this.style.paddingLeft = "5px";
-          this.style.transition = "padding-left 0.3s ease";
+          this.style.transform = "translateX(5px)";
         });
         link.addEventListener("mouseleave", function () {
-          this.style.paddingLeft = "0";
+          this.style.transform = "translateX(0)";
+        });
+      });
+
+      // Social link hover effects
+      document.querySelectorAll(".social-link").forEach((link) => {
+        link.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-3px)";
+        });
+        link.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0)";
         });
       });
     </script>
+
+    <style>
+      /* Layout-specific styles */
+      .navbar-scrolled {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 18px;
+      }
+
+      .social-link:hover {
+        background: var(--bs-primary);
+        color: #ffffff;
+        transform: translateY(-3px);
+      }
+
+      .footer-link {
+        color: #9ca3af;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .footer-link:hover {
+        color: var(--bs-primary);
+        transform: translateX(5px);
+      }
+
+      .tech-badge {
+        background: rgba(59, 130, 246, 0.1);
+        color: var(--bs-primary);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .tech-badge:hover {
+        background: var(--bs-primary);
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .contact-item i {
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+
+      .footer-section {
+        height: 100%;
+      }
+
+      /* Back to top button animation */
+      #backToTop {
+        transition: all 0.3s ease;
+      }
+
+      #backToTop:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4) !important;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Navigation active state */
+      .navbar-nav .nav-link.active {
+        position: relative;
+      }
+
+      .navbar-nav .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        background: var(--bs-primary);
+        border-radius: 50%;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .social-links {
+          justify-content: center;
+        }
+
+        .footer-section {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .contact-item {
+          justify-content: center;
+        }
+      }
+
+      /* Elegant Footer Styles */
+      .elegant-footer {
+        background: linear-gradient(
+          135deg,
+          #1e293b 0%,
+          #0f172a 100%
+        ) !important;
+        border-top: 1px solid rgba(59, 130, 246, 0.2);
+        min-height: auto;
+      }
+
+      .footer-brand h5 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: rgba(59, 130, 246, 0.1);
+        color: #93c5fd;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+      }
+
+      .social-icon:hover {
+        background: var(--bs-primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+      }
+
+      .footer-link {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        position: relative;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
+      .footer-link:hover {
+        color: var(--bs-primary);
+        transform: translateY(-1px);
+      }
+
+      .footer-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        background: var(--bs-primary);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .footer-link:hover::after {
+        width: 100%;
+      }
+
+      .contact-item {
+        color: #94a3b8;
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      .contact-item i {
+        font-size: 0.75rem;
+      }
+
+      .tech-tag {
+        background: rgba(6, 182, 212, 0.1);
+        color: #06b6d4;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border: 1px solid rgba(6, 182, 212, 0.2);
+        transition: all 0.2s ease;
+      }
+
+      .tech-tag:hover {
+        background: #06b6d4;
+        color: white;
+        transform: scale(1.05);
+      }
+
+      .status-badge {
+        background: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+        padding: 4px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        font-weight: 600;
+      }
+
+      .status-badge .fa-circle {
+        animation: pulse-dot 2s infinite;
+      }
+
+      @keyframes pulse-dot {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      /* Responsive adjustments for elegant footer */
+      @media (max-width: 768px) {
+        .elegant-footer .row {
+          text-align: center;
+        }
+
+        .footer-brand {
+          margin-bottom: 1rem;
+        }
+
+        .quick-links {
+          flex-wrap: wrap;
+          gap: 1rem !important;
+        }
+
+        .contact-brief {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .contact-item {
+          display: block;
+        }
+
+        .tech-tags {
+          justify-content: center !important;
+          margin-top: 1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .elegant-footer .social-links {
+          justify-content: center;
+          margin-top: 1rem;
+        }
+
+        .quick-links {
+          flex-direction: column;
+          gap: 0.5rem !important;
+        }
+      }
+    </style>
   </body>
 </html>
