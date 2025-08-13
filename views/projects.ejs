@@ -1,0 +1,305 @@
+<section class="py-5 mt-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-4 fw-bold">My Projects</h1>
+      <p class="lead text-muted">A collection of my work</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-5">
+      <button
+        class="btn btn-outline-primary me-2 mb-2 filter-btn active"
+        data-filter="all"
+      >
+        All
+      </button>
+      <button
+        class="btn btn-outline-primary me-2 mb-2 filter-btn"
+        data-filter="web"
+      >
+        Web Apps
+      </button>
+      <button
+        class="btn btn-outline-primary me-2 mb-2 filter-btn"
+        data-filter="mobile"
+      >
+        Mobile
+      </button>
+      <button
+        class="btn btn-outline-primary me-2 mb-2 filter-btn"
+        data-filter="api"
+      >
+        APIs
+      </button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="row g-4" id="projectsGrid">
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6 project-item" data-category="web">
+        <div class="card h-100 shadow-sm project-card">
+          <div class="position-relative overflow-hidden">
+            <img
+              src="/images/project1.jpg"
+              class="card-img-top"
+              alt="E-Commerce Platform"
+              style="height: 250px; object-fit: cover"
+            />
+            <div class="project-overlay">
+              <div class="text-center text-white">
+                <h5>View Project</h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-light btn-sm me-2">Live Demo</a>
+                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">E-Commerce Platform</h5>
+            <p class="card-text">
+              A full-stack e-commerce solution with user authentication, payment
+              processing, and admin dashboard.
+            </p>
+            <div class="mb-3">
+              <span class="badge bg-primary me-1">React</span>
+              <span class="badge bg-success me-1">Node.js</span>
+              <span class="badge bg-info me-1">MongoDB</span>
+              <span class="badge bg-warning me-1">Stripe</span>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent">
+            <small class="text-muted">Completed: March 2024</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6 project-item" data-category="web">
+        <div class="card h-100 shadow-sm project-card">
+          <div class="position-relative overflow-hidden">
+            <img
+              src="/images/project2.jpg"
+              class="card-img-top"
+              alt="Task Management App"
+              style="height: 250px; object-fit: cover"
+            />
+            <div class="project-overlay">
+              <div class="text-center text-white">
+                <h5>View Project</h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-light btn-sm me-2">Live Demo</a>
+                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Task Management App</h5>
+            <p class="card-text">
+              Collaborative task management with real-time updates, team
+              collaboration, and progress tracking.
+            </p>
+            <div class="mb-3">
+              <span class="badge bg-primary me-1">Vue.js</span>
+              <span class="badge bg-success me-1">Express</span>
+              <span class="badge bg-warning me-1">Socket.io</span>
+              <span class="badge bg-info me-1">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent">
+            <small class="text-muted">Completed: February 2024</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6 project-item" data-category="api">
+        <div class="card h-100 shadow-sm project-card">
+          <div class="position-relative overflow-hidden">
+            <img
+              src="/images/project3.jpg"
+              class="card-img-top"
+              alt="REST API"
+              style="height: 250px; object-fit: cover"
+            />
+            <div class="project-overlay">
+              <div class="text-center text-white">
+                <h5>View Project</h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-light btn-sm me-2"
+                    >Documentation</a
+                  >
+                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">RESTful API Service</h5>
+            <p class="card-text">
+              Scalable API service with authentication, rate limiting, and
+              comprehensive documentation.
+            </p>
+            <div class="mb-3">
+              <span class="badge bg-success me-1">Node.js</span>
+              <span class="badge bg-primary me-1">Express</span>
+              <span class="badge bg-info me-1">JWT</span>
+              <span class="badge bg-secondary me-1">Swagger</span>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent">
+            <small class="text-muted">Completed: January 2024</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-lg-4 col-md-6 project-item" data-category="mobile">
+        <div class="card h-100 shadow-sm project-card">
+          <div class="position-relative overflow-hidden">
+            <img
+              src="/images/project4.jpg"
+              class="card-img-top"
+              alt="Mobile App"
+              style="height: 250px; object-fit: cover"
+            />
+            <div class="project-overlay">
+              <div class="text-center text-white">
+                <h5>View Project</h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-light btn-sm me-2">App Store</a>
+                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">React Native App</h5>
+            <p class="card-text">
+              Cross-platform mobile application with offline capabilities and
+              push notifications.
+            </p>
+            <div class="mb-3">
+              <span class="badge bg-primary me-1">React Native</span>
+              <span class="badge bg-info me-1">Redux</span>
+              <span class="badge bg-warning me-1">Firebase</span>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent">
+            <small class="text-muted">Completed: December 2023</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-lg-4 col-md-6 project-item" data-category="web">
+        <div class="card h-100 shadow-sm project-card">
+          <div class="position-relative overflow-hidden">
+            <img
+              src="/images/project5.jpg"
+              class="card-img-top"
+              alt="Data Visualization"
+              style="height: 250px; object-fit: cover"
+            />
+            <div class="project-overlay">
+              <div class="text-center text-white">
+                <h5>View Project</h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-light btn-sm me-2">Live Demo</a>
+                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Data Visualization Dashboard</h5>
+            <p class="card-text">
+              Interactive dashboard for data analysis with real-time charts and
+              filtering capabilities.
+            </p>
+            <div class="mb-3">
+              <span class="badge bg-primary me-1">React</span>
+              <span class="badge bg-info me-1">D3.js</span>
+              <span class="badge bg-secondary me-1">Python</span>
+              <span class="badge bg-success me-1">Flask</span>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent">
+            <small class="text-muted">Completed: November 2023</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-lg-4 col-md-6 project-item" data-category="web">
+        <div class="card h-100 shadow-sm project-card">
+          <div class="position-relative overflow-hidden">
+            <img
+              src="/images/project6.jpg"
+              class="card-img-top"
+              alt="CMS System"
+              style="height: 250px; object-fit: cover"
+            />
+            <div class="project-overlay">
+              <div class="text-center text-white">
+                <h5>View Project</h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-light btn-sm me-2">Live Demo</a>
+                  <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Content Management System</h5>
+            <p class="card-text">
+              Custom CMS with drag-and-drop page builder, user management, and
+              SEO optimization.
+            </p>
+            <div class="mb-3">
+              <span class="badge bg-primary me-1">Next.js</span>
+              <span class="badge bg-success me-1">Node.js</span>
+              <span class="badge bg-info me-1">MySQL</span>
+              <span class="badge bg-warning me-1">AWS</span>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent">
+            <small class="text-muted">Completed: October 2023</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Project filtering functionality
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectItems = document.querySelectorAll(".project-item");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const filter = this.getAttribute("data-filter");
+
+        // Update active button
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        this.classList.add("active");
+
+        // Filter projects
+        projectItems.forEach((item) => {
+          const category = item.getAttribute("data-category");
+
+          if (filter === "all" || category === filter) {
+            item.style.display = "block";
+            item.classList.add("fade-in-up");
+          } else {
+            item.style.display = "none";
+            item.classList.remove("fade-in-up");
+          }
+        });
+      });
+    });
+  });
+</script>
