@@ -2,17 +2,17 @@
 <section class="py-4 mt-5">
   <div class="container">
     <div class="text-center mb-4">
-      <!-- Professional Header for PDF -->
-      <div class="pdf-header d-none" style="display: none">
-        <h1 class="fw-bold mb-2">William Mai</h1>
+      <!-- Professional Header for PDF (Hidden on screen, visible in print) -->
+      <div class="pdf-header">
+        <h1 class="fw-bold mb-2">William Ma</h1>
         <div class="contact-info">
           <p class="mb-1">
             Software Engineering Student | Ton Duc Thang University
           </p>
           <p class="mb-1">
-            Email: cuongmai.work@gmail.com | Phone: +84 XXX XXX XXX
+            Email: cuongmai.work@gmail.com | Phone: +84 868 959 212
           </p>
-          <p class="mb-3">
+          <p class="mb-0">
             Location: Ho Chi Minh City, Vietnam | LinkedIn:
             linkedin.com/in/william-mai
           </p>
@@ -30,10 +30,9 @@
         </p>
         <div class="d-flex gap-2 justify-content-center flex-wrap mb-2">
           <button
-            class="btn btn-primary btn-sm print-btn"
-            onclick="printResume()"
+            id="printBtn"
+            class="btn btn-primary btn-sm"
             title="Print or save as PDF"
-            type="button"
           >
             <i class="fas fa-print me-1"></i>Print PDF
           </button>
@@ -47,18 +46,22 @@
         </small>
       </div>
 
-      <!-- Inline Quick Stats -->
-      <div class="row g-2 text-center">
+      <!-- Quick Stats -->
+      <div class="row g-2 text-center quick-stats-section">
         <div class="col-3">
-          <div class="badge bg-primary bg-opacity-10 text-primary p-2 w-100">
+          <div
+            class="badge bg-primary bg-opacity-10 text-primary p-2 w-100 stat-badge"
+          >
             <i class="fas fa-graduation-cap d-block mb-1"></i>
-            <small class="fw-bold text-white text-center"
+            <small class="fw-bold"
               >2026<br /><span class="fw-normal">Graduate</span></small
             >
           </div>
         </div>
         <div class="col-3">
-          <div class="badge bg-success bg-opacity-10 text-success p-2 w-100">
+          <div
+            class="badge bg-success bg-opacity-10 text-success p-2 w-100 stat-badge"
+          >
             <i class="fas fa-code d-block mb-1"></i>
             <small class="fw-bold"
               >10+<br /><span class="fw-normal">Tech</span></small
@@ -66,7 +69,9 @@
           </div>
         </div>
         <div class="col-3">
-          <div class="badge bg-warning bg-opacity-10 text-warning p-2 w-100">
+          <div
+            class="badge bg-warning bg-opacity-10 text-warning p-2 w-100 stat-badge"
+          >
             <i class="fas fa-project-diagram d-block mb-1"></i>
             <small class="fw-bold"
               >3<br /><span class="fw-normal">Projects</span></small
@@ -74,7 +79,9 @@
           </div>
         </div>
         <div class="col-3">
-          <div class="badge bg-info bg-opacity-10 text-info p-2 w-100">
+          <div
+            class="badge bg-info bg-opacity-10 text-info p-2 w-100 stat-badge"
+          >
             <i class="fas fa-star d-block mb-1"></i>
             <small class="fw-bold"
               >3.2<br /><span class="fw-normal">GPA</span></small
@@ -86,12 +93,12 @@
   </div>
 </section>
 
-<!-- Compact Resume Content -->
+<!-- Resume Content -->
 <section class="py-4">
   <div class="container">
     <div class="row g-4">
       <!-- Left Column -->
-      <div class="col-lg-8">
+      <div class="col-lg-8 left-column">
         <!-- Professional Summary -->
         <div class="card border-0 shadow-sm mb-4">
           <div class="card-header bg-primary py-2 px-3">
@@ -110,34 +117,6 @@
               opportunities at innovative technology companies to contribute to
               impactful projects and grow technical expertise.
             </p>
-          </div>
-        </div>
-
-        <!-- Education -->
-        <div class="card border-0 shadow-sm mb-4">
-          <div class="card-header bg-success py-2 px-3">
-            <h5 class="mb-0 text-white">
-              <i class="fas fa-graduation-cap me-2"></i>Education
-            </h5>
-          </div>
-          <div class="card-body p-3">
-            <div class="d-flex align-items-center">
-              <div class="bg-success bg-opacity-10 rounded p-2 me-3">
-                <img
-                  src="/images/tdtu-logo.png"
-                  alt="TDTU Logo"
-                  style="width: 40px; height: 40px; object-fit: contain"
-                />
-              </div>
-              <div class="flex-grow-1">
-                <h6 class="fw-bold mb-1">Bachelor of Software Engineering</h6>
-                <p class="text-success mb-1">Ton Duc Thang University</p>
-                <small class="text-muted"
-                  >2022 - 2026 | Current GPA: 3.2/4.0</small
-                >
-              </div>
-              <span class="badge bg-success">Expected 2026</span>
-            </div>
           </div>
         </div>
 
@@ -215,7 +194,7 @@
       </div>
 
       <!-- Right Column -->
-      <div class="col-lg-4">
+      <div class="col-lg-4 right-column">
         <!-- Technical Skills -->
         <div class="card border-0 shadow-sm mb-4">
           <div class="card-header bg-info py-2 px-3">
@@ -248,7 +227,7 @@
               </div>
             </div>
 
-            <!-- Web Technologies & Frameworks -->
+            <!-- Web Technologies -->
             <div class="mb-3">
               <h6 class="fw-bold mb-2 text-primary small">
                 <i class="fas fa-globe me-1"></i>Web Technologies
@@ -313,6 +292,36 @@
           </div>
         </div>
 
+        <!-- Education -->
+        <div class="card border-0 shadow-sm mb-4">
+          <div class="card-header bg-success py-2 px-3">
+            <h5 class="mb-0 text-white">
+              <i class="fas fa-graduation-cap me-2"></i>Education
+            </h5>
+          </div>
+          <div class="card-body p-3">
+            <div class="d-flex align-items-center">
+              <div class="bg-success bg-opacity-10 rounded p-2 me-3 web-only">
+                <img
+                  src="/images/tdtu-logo.png"
+                  alt="TDTU Logo"
+                  style="width: 30px; height: 30px; object-fit: contain"
+                />
+              </div>
+              <div class="flex-grow-1">
+                <h6 class="fw-bold mb-1 small">
+                  Bachelor of Software Engineering
+                </h6>
+                <p class="text-success mb-1 small">Ton Duc Thang University</p>
+                <small class="text-muted"
+                  >2022 - 2026 | Current GPA: 3.2/4.0</small
+                >
+              </div>
+              <span class="badge bg-success">Expected 2026</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Certifications -->
         <div class="card border-0 shadow-sm mb-4">
           <div class="card-header bg-secondary py-2 px-3">
@@ -324,7 +333,7 @@
             <div class="mb-3">
               <div class="d-flex align-items-center">
                 <div
-                  class="bg-danger bg-opacity-10 rounded p-2 me-2"
+                  class="bg-danger bg-opacity-10 rounded p-2 me-2 web-only"
                   style="width: 40px; height: 40px"
                 >
                   <i class="fab fa-redhat text-danger"></i>
@@ -340,19 +349,17 @@
             <div class="mb-0">
               <div class="d-flex align-items-center">
                 <div
-                  class="bg-warning bg-opacity-10 rounded p-2 me-2"
+                  class="bg-warning bg-opacity-10 rounded p-2 me-2 web-only"
                   style="width: 40px; height: 40px"
                 >
                   <i class="fab fa-aws text-warning"></i>
                 </div>
                 <div class="flex-grow-1">
                   <h6 class="mb-1 small fw-bold">AWS Cloud Practitioner</h6>
-                  <small class="text-muted"
-                    >Amazon Web Services •
-                    <span class="badge bg-warning text-dark"
-                      >In Progress</span
-                    ></small
-                  >
+                  <small class="text-muted">
+                    Amazon Web Services •
+                    <span class="badge bg-warning text-dark">In Progress</span>
+                  </small>
                 </div>
               </div>
             </div>
@@ -391,7 +398,7 @@
 </section>
 
 <style>
-  /* Compact Resume Styles */
+  /* Screen styles */
   .text-gradient {
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     -webkit-background-clip: text;
@@ -399,7 +406,6 @@
     background-clip: text;
   }
 
-  /* Compact card styling */
   .card {
     transition: all 0.3s ease;
   }
@@ -409,315 +415,228 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
   }
 
-  .card-header {
-    font-size: 0.95rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  /* Compact project items */
-  .project-item {
-    transition: all 0.2s ease;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    margin: -0.5rem -0.75rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .project-item:hover {
-    background: rgba(59, 130, 246, 0.05);
-    transform: translateX(5px);
-  }
-
-  /* Compact badges */
   .badge {
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.25rem 0.5rem;
   }
 
-  /* Progress bars */
-  .progress {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
+  .pdf-header {
+    display: none;
   }
 
-  .progress-bar {
-    transition: width 0.6s ease;
-  }
-
-  /* Quick stats styling */
-  .badge.p-2 {
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-  }
-
-  .badge.p-2:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Icon sizing */
-  .fab,
-  .fas {
-    line-height: 1;
-  }
-
-  /* Compact spacing */
-  .mb-4 {
-    margin-bottom: 1rem !important;
-  }
-  .mb-3 {
-    margin-bottom: 0.75rem !important;
-  }
-  .mb-2 {
-    margin-bottom: 0.5rem !important;
-  }
-  .mb-1 {
-    margin-bottom: 0.25rem !important;
-  }
-
-  /* Card headers with forced text colors */
-  .card-header.bg-primary h5 {
-    color: #ffffff !important;
-  }
-
-  .card-header.bg-success h5 {
-    color: #ffffff !important;
-  }
-
-  .card-header.bg-info h5 {
-    color: #ffffff !important;
-  }
-
-  .card-header.bg-warning h5 {
-    color: #000000 !important;
-  }
-
-  .card-header.bg-secondary h5 {
-    color: #ffffff !important;
-  }
-
-  .card-header.bg-dark h5 {
-    color: #ffffff !important;
-  }
-
-  /* Icon colors in headers */
-  .card-header.bg-primary i,
-  .card-header.bg-success i,
-  .card-header.bg-info i,
-  .card-header.bg-secondary i,
-  .card-header.bg-dark i {
-    color: #ffffff !important;
-  }
-
-  .card-header.bg-warning i {
-    color: #000000 !important;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .project-item:hover {
-      transform: none;
-      background: transparent;
-    }
-
-    .card:hover {
-      transform: none;
-    }
-
-    .badge.p-2:hover {
-      transform: none;
-    }
-
-    .row.g-4 {
-      gap: 0.5rem !important;
-    }
-    .row.g-2 {
-      gap: 0.25rem !important;
-    }
-  }
-
-  /* Print styles for professional PDF output */
+  /* Print Styles */
   @media print {
     /* Page setup */
     @page {
-      margin: 0.5in;
       size: letter;
+      margin: 0.5in;
     }
 
+    /* Force color printing */
     * {
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
+      color-adjust: exact !important;
     }
 
-    /* Show PDF header, hide web header */
+    /* Reset body */
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: white !important;
+      font-size: 11pt !important;
+      line-height: 1.3 !important;
+    }
+
+    /* Hide web elements */
+    .web-header,
+    .web-only,
+    .btn,
+    button,
+    .navbar,
+    footer,
+    #backToTop,
+    .progress {
+      display: none !important;
+    }
+
+    /* Show PDF header */
     .pdf-header {
       display: block !important;
       text-align: center !important;
-      border-bottom: 2pt solid #000 !important;
-      padding-bottom: 10pt !important;
-      margin-bottom: 15pt !important;
+      margin-bottom: 20px !important;
+      padding-bottom: 15px !important;
+      border-bottom: 2px solid #000 !important;
     }
 
-    .web-header {
-      display: none !important;
+    .pdf-header h1 {
+      font-size: 24pt !important;
+      margin-bottom: 10px !important;
+      color: #000 !important;
     }
 
-    /* Contact info styling */
-    .contact-info p {
+    .pdf-header p {
       font-size: 10pt !important;
-      color: #000 !important;
-      margin: 2pt 0 !important;
+      margin: 2px 0 !important;
+      color: #333 !important;
     }
 
-    /* Hide elements not needed in PDF */
-    .btn,
-    button {
-      display: none !important;
+    /* Quick Stats Row in PDF */
+    .quick-stats-section {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      gap: 0 !important;
+      margin: 15pt 0 !important;
+      padding: 0 20pt !important;
+      page-break-inside: avoid !important;
+      width: 100% !important;
     }
 
-    /* Hide tip text in print */
-    small.text-muted {
-      display: none !important;
-    }
-
-    /* Body and layout */
-    body {
-      background: white !important;
-      color: #000 !important;
-      font-size: 11pt !important;
-      line-height: 1.4 !important;
-      padding: 0 !important;
+    .quick-stats-section .col-3 {
+      flex: 1 !important;
+      width: 25% !important;
+      max-width: 25% !important;
       margin: 0 !important;
+      padding: 0 5pt !important;
+      float: left !important;
     }
 
+    .stat-badge {
+      background: #f8f9fa !important;
+      border: 1pt solid #ddd !important;
+      color: #000 !important;
+      padding: 6pt 8pt !important;
+      border-radius: 4pt !important;
+      display: block !important;
+      text-align: center !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .stat-badge i {
+      font-size: 14pt !important;
+      color: #000 !important;
+      margin-bottom: 4pt !important;
+    }
+
+    .stat-badge small {
+      font-size: 9pt !important;
+      font-weight: bold !important;
+      color: #000 !important;
+      line-height: 1.2 !important;
+    }
+
+    /* Clearfix for stats row */
+    .quick-stats-section::after {
+      content: "" !important;
+      display: table !important;
+      clear: both !important;
+    }
+
+    /* Container and sections */
     .container {
-      max-width: none !important;
+      max-width: 100% !important;
       padding: 0 !important;
       margin: 0 !important;
     }
 
-    /* Sections */
     section {
       padding: 0 !important;
       margin: 0 !important;
-      page-break-inside: avoid;
     }
 
-    /* Header section - compact for PDF */
-    section:first-child {
-      margin-bottom: 15pt !important;
-      border-bottom: 2pt solid #000 !important;
-      padding-bottom: 10pt !important;
-    }
-
-    /* Typography */
-    h1 {
-      font-size: 24pt !important;
-      font-weight: bold !important;
-      color: #000 !important;
-      margin: 0 0 8pt 0 !important;
-      text-align: center !important;
-    }
-
-    h5 {
-      font-size: 12pt !important;
-      font-weight: bold !important;
-      color: #000 !important;
-      margin: 0 0 6pt 0 !important;
-    }
-
-    h6 {
-      font-size: 11pt !important;
-      font-weight: bold !important;
-      color: #000 !important;
-      margin: 0 0 4pt 0 !important;
-    }
-
-    p {
-      font-size: 10pt !important;
-      color: #333 !important;
-      margin: 0 0 6pt 0 !important;
-    }
-
-    /* Cards become clean sections */
-    .card {
-      background: white !important;
-      border: none !important;
-      box-shadow: none !important;
-      margin-bottom: 12pt !important;
-      page-break-inside: avoid !important;
-    }
-
-    .card-header {
-      background: #f8f9fa !important;
-      border: 1pt solid #ddd !important;
-      border-bottom: 2pt solid #000 !important;
-      padding: 6pt 10pt !important;
+    .py-4,
+    .py-5,
+    .mt-5 {
+      padding: 0 !important;
       margin: 0 !important;
     }
 
+    /* Two column layout for print */
+    .row {
+      display: block !important;
+      margin: 0 !important;
+    }
+
+    .left-column {
+      width: 62% !important;
+      float: left !important;
+      padding-right: 15px !important;
+    }
+
+    .right-column {
+      width: 36% !important;
+      float: right !important;
+      padding-left: 15px !important;
+    }
+
+    /* Cards */
+    .card {
+      border: 1px solid #ddd !important;
+      box-shadow: none !important;
+      margin-bottom: 15px !important;
+      page-break-inside: avoid !important;
+      transform: none !important;
+    }
+
+    .card-header {
+      background: #f5f5f5 !important;
+      border-bottom: 1px solid #333 !important;
+      padding: 8px 12px !important;
+    }
+
     .card-header h5 {
-      color: #000 !important;
       font-size: 12pt !important;
-      font-weight: bold !important;
+      color: #000 !important;
       margin: 0 !important;
     }
 
     .card-header i {
-      color: #000 !important;
+      display: none !important;
     }
 
     .card-body {
-      padding: 8pt 10pt !important;
-      border-left: 1pt solid #ddd !important;
-      border-right: 1pt solid #ddd !important;
-      border-bottom: 1pt solid #ddd !important;
+      padding: 10px 12px !important;
     }
 
-    /* Badges become professional text */
-    .badge {
-      background: #f8f9fa !important;
-      color: #000 !important;
-      border: 1pt solid #ddd !important;
+    /* Typography */
+    h1 {
+      font-size: 20pt !important;
+    }
+    h5 {
+      font-size: 11pt !important;
+    }
+    h6 {
+      font-size: 10pt !important;
+    }
+    p {
       font-size: 9pt !important;
-      padding: 2pt 4pt !important;
-      margin: 1pt !important;
-      display: inline-block !important;
-      border-radius: 2pt !important;
+    }
+    small {
+      font-size: 8pt !important;
     }
 
-    /* Quick stats - make them professional */
-    .row.g-2 .badge.p-2 {
+    /* Badges */
+    .badge {
       background: white !important;
-      border: 1pt solid #000 !important;
       color: #000 !important;
-      text-align: center !important;
-      padding: 4pt !important;
+      border: 1px solid #666 !important;
+      font-size: 8pt !important;
+      padding: 1px 4px !important;
+      font-weight: normal !important;
     }
 
-    /* Projects section */
-    .border-bottom {
-      border-bottom: 1pt solid #ddd !important;
-      margin-bottom: 8pt !important;
-      padding-bottom: 6pt !important;
-    }
-
-    /* Remove hover effects */
-    .project-item:hover,
-    .card:hover,
-    .badge:hover {
-      transform: none !important;
-      box-shadow: none !important;
-      background: inherit !important;
-    }
-
-    /* Text colors */
+    /* Colors to black */
     .text-primary,
     .text-success,
     .text-info,
     .text-warning,
-    .text-danger {
+    .text-danger,
+    .text-secondary,
+    .text-dark {
       color: #000 !important;
     }
 
@@ -725,120 +644,73 @@
       color: #666 !important;
     }
 
-    /* Icons */
-    .fas,
-    .fab {
-      color: #000 !important;
-      font-size: 10pt !important;
+    /* Background colors */
+    .bg-primary,
+    .bg-success,
+    .bg-info,
+    .bg-warning,
+    .bg-danger,
+    .bg-secondary,
+    .bg-dark {
+      background: transparent !important;
     }
 
-    /* Layout adjustments */
-    .col-lg-8,
-    .col-lg-4 {
-      width: 100% !important;
+    /* Borders */
+    .border-bottom {
+      border-bottom: 1px solid #ccc !important;
     }
 
-    .col-lg-8 {
-      float: left !important;
-      width: 65% !important;
-    }
-
-    .col-lg-4 {
-      float: right !important;
-      width: 32% !important;
-    }
-
-    .row {
-      margin: 0 !important;
-    }
-
-    /* Contact info in header */
-    .text-center.mb-4 p {
-      font-size: 11pt !important;
-      color: #000 !important;
-      margin: 4pt 0 !important;
-    }
-
-    /* Professional spacing */
-    .mb-4,
-    .mb-3,
-    .mb-2,
-    .mb-1 {
-      margin-bottom: 8pt !important;
-    }
-
-    /* Ensure content fits on page */
-    .container-fluid {
-      font-size: 10pt !important;
-    }
-
-    /* Remove unnecessary spacing */
-    .py-5,
-    .py-4,
-    .py-3,
-    .py-2,
-    .py-1 {
-      padding: 0 !important;
-    }
-
-    /* Skills section optimization */
-    .d-flex.flex-wrap.gap-1 {
-      line-height: 1.6 !important;
-    }
-
-    /* Education section */
-    .d-flex.align-items-center img {
-      display: none !important;
+    /* Clear floats */
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
     }
 
     /* Page breaks */
-    .card:nth-child(4) {
-      page-break-before: auto !important;
-    }
-
-    /* Footer info */
-    .small {
-      font-size: 9pt !important;
+    .card {
+      page-break-inside: avoid !important;
     }
   }
 </style>
 
 <script>
-  // Simple and reliable print functionality
-  function printResume() {
-    try {
-      // Change button text to show loading
-      const button = document.querySelector(".print-btn");
-      const originalText = button.innerHTML;
-      button.innerHTML =
-        '<i class="fas fa-spinner fa-spin me-1"></i>Preparing PDF...';
-      button.disabled = true;
-
-      // Small delay then trigger print
-      setTimeout(() => {
-        window.print();
-
-        // Reset button after a short delay
-        setTimeout(() => {
-          button.innerHTML = originalText;
-          button.disabled = false;
-        }, 1000);
-      }, 300);
-    } catch (error) {
-      console.error("Print error:", error);
-      // Fallback - just trigger print directly
-      window.print();
-    }
-  }
-
-  // Additional event listener for extra reliability
   document.addEventListener("DOMContentLoaded", function () {
-    const printBtn = document.querySelector(".print-btn");
+    // Get the print button
+    const printBtn = document.getElementById("printBtn");
+
     if (printBtn) {
+      // Add click event listener
       printBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        printResume();
+
+        // Update button state
+        const originalHTML = this.innerHTML;
+        this.innerHTML =
+          '<i class="fas fa-spinner fa-spin me-1"></i>Preparing...';
+        this.disabled = true;
+
+        // Small delay for better UX
+        setTimeout(() => {
+          // Trigger print dialog
+          window.print();
+
+          // Restore button state
+          setTimeout(() => {
+            this.innerHTML = originalHTML;
+            this.disabled = false;
+          }, 500);
+        }, 100);
       });
     }
+
+    // Also handle keyboard shortcut
+    document.addEventListener("keydown", function (e) {
+      // Ctrl+P or Cmd+P
+      if ((e.ctrlKey || e.metaKey) && e.key === "p") {
+        // Browser will handle native print
+        return true;
+      }
+    });
   });
 </script>
