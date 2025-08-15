@@ -285,6 +285,31 @@ h6 {
   box-shadow: var(--shadow-md);
 }
 
+/* Technology Badge Styles */
+.badge.bg-primary.bg-opacity-10 {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(59, 130, 246, 0.25) !important;
+}
+
+.badge.bg-success.bg-opacity-10 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  color: var(--success-color) !important;
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+.badge.bg-info.bg-opacity-10 {
+  background-color: rgba(6, 182, 212, 0.1) !important;
+  color: var(--accent-color) !important;
+  border: 1px solid rgba(6, 182, 212, 0.25) !important;
+}
+
+.badge.bg-warning.bg-opacity-10 {
+  background-color: rgba(245, 158, 11, 0.1) !important;
+  color: var(--warning-color) !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
 /* Skill Cards */
 .skill-card {
   background: white;
@@ -782,6 +807,32 @@ footer {
 }
 .border-primary {
   border-color: var(--primary-color) !important;
+}
+
+/* Bootstrap-like opacity utilities */
+.bg-opacity-10 {
+  --bs-bg-opacity: 0.1;
+}
+
+.bg-opacity-25 {
+  --bs-bg-opacity: 0.25;
+}
+
+.border-opacity-25 {
+  --bs-border-opacity: 0.25;
+}
+
+/* Additional color utilities */
+.text-success {
+  color: var(--success-color) !important;
+}
+
+.text-info {
+  color: var(--accent-color) !important;
+}
+
+.text-warning {
+  color: var(--warning-color) !important;
 }
 
 /* Custom scrollbar */
